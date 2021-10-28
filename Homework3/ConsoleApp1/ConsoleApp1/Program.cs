@@ -109,8 +109,7 @@ namespace ConsoleApp1
                 rndEmployee[i].Company = companyGenerator.Generate();
             }
 
-            return rndEmployee;
-
+            return rndEmployee; 
         }
     }
 }
