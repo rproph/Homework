@@ -32,5 +32,6 @@ namespace ConsoleApp1
                 Console.WriteLine($"Hello, I am {FullName}. \nI want to be a { JobTitle} ({ JobDescription}) with a salary from \n{ JobSalary}. \nI quit my previous job for a reason of { DismissalReason}.");
             }
         }
+
     }
 }
