@@ -1,18 +1,9 @@
 ﻿using System;
 using Bogus;
-using Bogus.DataSets;
+
 
 namespace ConsoleApp1
 {
-    public enum DisReasons
-    {
-        FamilyReasons,
-        ProfessionalGrowthLack,
-        LowSalary,
-        BadTeamMicroclimate,
-        LackManagementUnderstanding,
-        Other
-    }
 
     public class Program
     {
@@ -20,14 +11,10 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-            EmployeeReportGenerator erg = new EmployeeReportGenerator();
-
-            Employee[] emps = RandomEmpCount();
-
-            erg.CompareByName(emps);
+           
         }
 
-        static DisReasons? RndDisReason()
+        static DismissalReasons? RndDisReason()
         {
             Random rndValue = new Random();
 
@@ -39,7 +26,7 @@ namespace ConsoleApp1
             }
             else
             {
-                return (DisReasons)value;
+                return (DismissalReasons)value;
             }
         }
 
