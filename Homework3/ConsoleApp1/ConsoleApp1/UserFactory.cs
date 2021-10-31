@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace ConsoleApp1
 {
     public abstract class UserFactory
@@ -12,7 +11,7 @@ namespace ConsoleApp1
     {
         public override User Create()
         {
-            return new Candidate();
+            return new Candidate().CreateRndCand();
         }
     }
 
@@ -20,7 +19,7 @@ namespace ConsoleApp1
     {
         public override User Create()
         {
-            return new Employee();
+            return new Employee().CreateRndEmp();
         }
     }
 
