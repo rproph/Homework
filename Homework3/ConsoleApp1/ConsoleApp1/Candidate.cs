@@ -3,19 +3,24 @@ using Bogus;
 
 namespace ConsoleApp1
 {
-    public enum DismissalReasons
-    {
-        FamilyReasons,
-        ProfessionalGrowthLack,
-        LowSalary,
-        BadTeamMicroclimate,
-        LackManagementUnderstanding,
-        Other
-    }
 
     public class Candidate : User, IDisplayable
     {
         public DismissalReasons? DismissalReason;
+        private Random rnd = new Random();
+
+        private int randomArrSize
+        {
+            get
+            {
+                return randomArrSize;
+            }
+
+            set
+            {
+                randomArrSize = rnd.Next(1, 11);
+            }
+        }
 
         public void Display()
         {
@@ -29,7 +34,7 @@ namespace ConsoleApp1
             }
         }
 
-        public static DismissalReasons? RndDismissalReason()
+        public static DismissalReasons? RandomDismissalReason()
         {
             Random rndValue = new Random();
 
@@ -45,43 +50,17 @@ namespace ConsoleApp1
             }
         }
 
-        public Candidate CreateRndCand()
+        public Candidate CreateRandomCandidate()
         {
-            string[,] JobTitles = { { "Programmer", "Tester", "HR" }, { "Coding specialisation", "Testing specialisation", "Recruiting and training students " } };
-            Random rnd = new Random();
-            Candidate rndCandidate = new Candidate();
-            int rndJobtitle;
-
-            rndJobtitle = rnd.Next(0, 3);
-
-            var generator = new Faker<Candidate>()
+            return new Faker<Candidate>()
                     .StrictMode(true)
                     .RuleFor(x => x.Id, f => Guid.NewGuid())
                     .RuleFor(x => x.FirstName, f => f.Name.FirstName())
                     .RuleFor(x => x.LastName, f => f.Name.LastName())
-                    .RuleFor(x => x.JobDescription, f => JobTitles[1, rndJobtitle])
-                    .RuleFor(x => x.JobTitle, f => JobTitles[0, rndJobtitle])
+                    .RuleFor(x => x.JobDescription, f => f.Name.JobDescriptor())
+                    .RuleFor(x => x.JobTitle, f => f.Name.JobTitle())
                     .RuleFor(x => x.JobSalary, f => f.Random.Int(100, 300))
-                    .RuleFor(x => x.DismissalReason, f => RndDismissalReason());
-
-            rndCandidate = generator.Generate();
-
-            return rndCandidate;
-        }
-
-        public Candidate[] RandomCandCount()
-        {
-            Random rnd = new Random();
-            int rndArrSize = rnd.Next(1, 11);
-
-            Candidate[] rndCandidates = new Candidate[rndArrSize];
-
-            for (int i = 0; i < rndArrSize; i++)
-            {
-                rndCandidates[i] = CreateRndCand();
-            }
-
-            return rndCandidates;
+                    .RuleFor(x => x.DismissalReason, f => RandomDismissalReason()).Generate();
         }
     }
 }
