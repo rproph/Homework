@@ -1,9 +1,5 @@
-﻿using System;
-
-
-namespace ConsoleApp1
+﻿namespace ConsoleApp1
 {
-
     public enum DismissalReasons
     {
         FamilyReasons,
