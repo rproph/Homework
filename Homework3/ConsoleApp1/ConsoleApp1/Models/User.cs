@@ -2,7 +2,7 @@
 
 namespace ConsoleApp1
 {
-    abstract public class User
+    public abstract class User
     {
         public Guid Id;
         public string FirstName;
