@@ -3,11 +3,9 @@ using Bogus;
 
 namespace ConsoleApp1
 {
-
     public class Candidate : User, IDisplayable
     {
         public DismissalReasons? DismissalReason;
-
         public void Display()
         {
             if (DismissalReason == null)
