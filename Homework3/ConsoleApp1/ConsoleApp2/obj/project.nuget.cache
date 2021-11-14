@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "TdY60dsxO8FVv9qZU7IbXMebMi0BudgA7akbwkMtzxYdx52Ba72L2lFG2Jy2ubztYeiQJjrzNVXX7EArAzc85g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\Documents\\GitHub\\ITAWorks\\Homework3\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
