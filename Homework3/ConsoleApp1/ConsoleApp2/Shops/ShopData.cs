@@ -14,6 +14,7 @@ namespace ConsoleApp2
                 List<PhoneData> phoneList = new List<PhoneData>();
                 int outOfStock = 0;
                 string storeName;
+                int stopper = 0;
                 Console.WriteLine("Which mobile phone do you want to buy ?");
 
                 string phoneName = Console.ReadLine();
@@ -42,7 +43,7 @@ namespace ConsoleApp2
                     }
                 }
 
-                if (outOfStock > 0)
+                if (outOfStock > 1)
                 {
                     continue;
                 }
@@ -63,22 +64,44 @@ namespace ConsoleApp2
 
                         foreach (Shops shop in Shops)
                         {
-                            if (storeName.ToLower().Equals(shop.Name))
+                            if (storeName.ToLower().Equals(shop.Name.ToLower()))
                             {
                                 Console.WriteLine($"Order for { phoneList[0].Model} ({ phoneList[0].OperationSystemType}), price ${ phoneList[0].Price}, market launch date { phoneList[0].MarketLaunchDate}, in shop {shop.Name} has been successfully placed.");
 
-                                break;
+                                stopper++;
                             }
                         }
+                    }
+                    else if(phoneList.Count == 1)
+                    {
+                        Console.WriteLine($"In which store do you want to buy the mobile phone { phoneName}");
 
+                        storeName = Console.ReadLine();
+
+                        foreach (Shops shop in Shops)
+                        {
+                            if (storeName.ToLower().Equals(shop.Name.ToLower()) && phoneList[0].ShopId == shop.Id)
+                            {
+                                Console.WriteLine($"Order for { phoneList[0].Model} ({ phoneList[0].OperationSystemType}), price ${ phoneList[0].Price}, market launch date { phoneList[0].MarketLaunchDate}, in shop {shop.Name} has been successfully placed.");
+
+                                stopper++;
+                            }
+                        }
                     }
                     else
                     {
-                        Console.WriteLine("his shop is not found.");
+                        Console.WriteLine("This shop is not found.");
 
                         break;
                     }
+
+                    if(stopper > 0)
+                    {
+                        break;
+                    }
                 }
+
+                break;
             }
         }
     }
