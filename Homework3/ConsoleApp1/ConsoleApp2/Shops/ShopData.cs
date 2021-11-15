@@ -43,63 +43,82 @@ namespace ConsoleApp2
                     }
                 }
 
-                if (outOfStock > 1)
+                try
                 {
-                    continue;
-                }
-                else if (phoneList.Count == 0)
-                {
-                    Console.WriteLine("This mobile phone is not found");
-
-                    continue;
-                }
-
-                while (true)
-                {
-                    if (phoneList.Count > 1)
+                    if (outOfStock > 1)
                     {
-                        Console.WriteLine($"In which store do you want to buy the mobile phone { phoneName}");
+                        continue;
+                    }
+                    else if (phoneList.Count == 0)
+                    {
+                        Console.WriteLine("This mobile phone is not found");
 
-                        storeName = Console.ReadLine();
+                        throw new PhoneCannotBeDoundException("Phone cannot be found.");
 
-                        foreach (Shops shop in Shops)
+                        continue;
+                    }
+                }
+                catch (PhoneCannotBeDoundException ex)
+                {
+                    Console.WriteLine($"Error {ex.Message}.");
+                }
+
+                try
+                {
+                    while (true)
+                    {
+                        if (phoneList.Count > 1)
                         {
-                            if (storeName.ToLower().Equals(shop.Name.ToLower()))
-                            {
-                                Console.WriteLine($"Order for { phoneList[0].Model} ({ phoneList[0].OperationSystemType}), price ${ phoneList[0].Price}, market launch date { phoneList[0].MarketLaunchDate}, in shop {shop.Name} has been successfully placed.");
+                            Console.WriteLine($"In which store do you want to buy the mobile phone { phoneName}");
 
-                                stopper++;
+                            storeName = Console.ReadLine();
+
+                            foreach (Shops shop in Shops)
+                            {
+                                if (storeName.ToLower().Equals(shop.Name.ToLower()))
+                                {
+                                    Console.WriteLine($"Order for { phoneList[0].Model} ({ phoneList[0].OperationSystemType}), price ${ phoneList[0].Price}, market launch date { phoneList[0].MarketLaunchDate}, in shop {shop.Name} has been successfully placed.");
+
+                                    stopper++;
+                                }
                             }
                         }
-                    }
-                    else if(phoneList.Count == 1)
-                    {
-                        Console.WriteLine($"In which store do you want to buy the mobile phone { phoneName}");
-
-                        storeName = Console.ReadLine();
-
-                        foreach (Shops shop in Shops)
+                        else if (phoneList.Count == 1)
                         {
-                            if (storeName.ToLower().Equals(shop.Name.ToLower()) && phoneList[0].ShopId == shop.Id)
-                            {
-                                Console.WriteLine($"Order for { phoneList[0].Model} ({ phoneList[0].OperationSystemType}), price ${ phoneList[0].Price}, market launch date { phoneList[0].MarketLaunchDate}, in shop {shop.Name} has been successfully placed.");
+                            Console.WriteLine($"In which store do you want to buy the mobile phone { phoneName}");
 
-                                stopper++;
+                            storeName = Console.ReadLine();
+
+                            foreach (Shops shop in Shops)
+                            {
+                                if (storeName.ToLower().Equals(shop.Name.ToLower()) && phoneList[0].ShopId == shop.Id)
+                                {
+                                    Console.WriteLine($"Order for { phoneList[0].Model} ({ phoneList[0].OperationSystemType}), price ${ phoneList[0].Price}, market launch date { phoneList[0].MarketLaunchDate}, in shop {shop.Name} has been successfully placed.");
+
+                                    stopper++;
+                                }
                             }
                         }
-                    }
-                    else
-                    {
-                        Console.WriteLine("This shop is not found.");
+                        else
+                        {
+                            Console.WriteLine("This shop is not found.");
 
-                        break;
-                    }
+                            throw new StoreCannotBeFoundException("Store cannot be found.");
 
-                    if(stopper > 0)
-                    {
-                        break;
+                            break;
+                        }
+
+                        if (stopper > 0)
+                        {
+                            break;
+                        }
                     }
                 }
+                catch(StoreCannotBeFoundException ex)
+                {
+                    Console.WriteLine($"Error {ex.Message}.");
+                }
+                
 
                 break;
             }
