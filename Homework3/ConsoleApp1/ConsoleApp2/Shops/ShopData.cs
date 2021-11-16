@@ -32,7 +32,7 @@ namespace ConsoleApp2
                         {
                             phoneList.Add(phone);
 
-                            Console.WriteLine($"Shop id : {shop.Id},\nShop name : {shop.Name},\n{phone.DisplayPhone()}\n");
+                            Console.WriteLine($"Shop name : {shop.Name},\n{phone.DisplayPhone()}\n");
                         }
                         else if (phoneName.ToLower().Equals(phone.Model.ToLower()) && phone.IsAvailable == false)
                         {
@@ -69,7 +69,7 @@ namespace ConsoleApp2
                     {
                         if (phoneList.Count > 1)
                         {
-                            Console.WriteLine($"In which store do you want to buy the mobile phone { phoneName}");
+                            Console.WriteLine($"In which store do you want to buy the mobile phone { phoneName} ?");
 
                             storeName = Console.ReadLine();
 
@@ -85,18 +85,25 @@ namespace ConsoleApp2
                         }
                         else if (phoneList.Count == 1)
                         {
-                            Console.WriteLine($"In which store do you want to buy the mobile phone { phoneName}");
+                            Console.WriteLine($"In which store do you want to buy the mobile phone { phoneName} ?");
 
                             storeName = Console.ReadLine();
 
-                            foreach (Shops shop in Shops)
+                            if (storeName.ToLower().Equals(Shops[0].Name.ToLower()) && phoneList[0].ShopId == Shops[0].Id)
                             {
-                                if (storeName.ToLower().Equals(shop.Name.ToLower()) && phoneList[0].ShopId == shop.Id)
-                                {
-                                    Console.WriteLine($"Order for { phoneList[0].Model} ({ phoneList[0].OperationSystemType}), price ${ phoneList[0].Price}, market launch date { phoneList[0].MarketLaunchDate}, in shop {shop.Name} has been successfully placed.");
+                                Console.WriteLine($"Order for { phoneList[0].Model} ({ phoneList[0].OperationSystemType}), price ${ phoneList[0].Price}, market launch date { phoneList[0].MarketLaunchDate}, in shop {Shops[0].Name} has been successfully placed.");
 
-                                    stopper++;
-                                }
+                                stopper++;
+                            }
+                            else if (storeName.ToLower().Equals(Shops[1].Name.ToLower()) && phoneList[0].ShopId == Shops[1].Id)
+                            {
+                                Console.WriteLine($"Order for { phoneList[0].Model} ({ phoneList[0].OperationSystemType}), price ${ phoneList[0].Price}, market launch date { phoneList[0].MarketLaunchDate}, in shop {Shops[0].Name} has been successfully placed.");
+
+                                stopper++;
+                            }
+                            else
+                            {
+                                Console.WriteLine($"This phone is not available in {storeName}.");
                             }
                         }
                         else
@@ -114,11 +121,11 @@ namespace ConsoleApp2
                         }
                     }
                 }
-                catch(StoreCannotBeFoundException ex)
+                catch (StoreCannotBeFoundException ex)
                 {
                     Console.WriteLine($"Error {ex.Message}.");
                 }
-                
+
 
                 break;
             }
