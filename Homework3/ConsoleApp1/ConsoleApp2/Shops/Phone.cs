@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp2
 {
-    public class PhoneData
+    public class Phone
     {
         public string Model { get; set; }
         public string OperationSystemType { get; set; }

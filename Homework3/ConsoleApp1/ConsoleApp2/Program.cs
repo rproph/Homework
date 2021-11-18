@@ -16,7 +16,7 @@ namespace ConsoleApp2
             try
             {
                 string json = File.ReadAllText("info.json");
-                var shopData = JsonSerializer.Deserialize<ShopData>(json, options);
+                var shopData = JsonSerializer.Deserialize<Shop>(json, options);
                 //shopData.Shops[1].FindAvailablePhonesCount();
 
                 shopData.MakeBuyRequest();
