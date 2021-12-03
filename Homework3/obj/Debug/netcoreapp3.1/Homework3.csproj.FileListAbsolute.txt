@@ -1,0 +1,15 @@
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\bin\Debug\netcoreapp3.1\Homework3.exe
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\bin\Debug\netcoreapp3.1\Homework3.deps.json
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\bin\Debug\netcoreapp3.1\Homework3.runtimeconfig.json
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\bin\Debug\netcoreapp3.1\Homework3.runtimeconfig.dev.json
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\bin\Debug\netcoreapp3.1\Homework3.dll
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\bin\Debug\netcoreapp3.1\Homework3.pdb
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\bin\Debug\netcoreapp3.1\Bogus.dll
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\obj\Debug\netcoreapp3.1\Homework3.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\obj\Debug\netcoreapp3.1\Homework3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\obj\Debug\netcoreapp3.1\Homework3.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\obj\Debug\netcoreapp3.1\Homework3.AssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\obj\Debug\netcoreapp3.1\Homework3.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\obj\Debug\netcoreapp3.1\Homework3.dll
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\obj\Debug\netcoreapp3.1\Homework3.pdb
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework3\obj\Debug\netcoreapp3.1\Homework3.genruntimeconfig.cache
