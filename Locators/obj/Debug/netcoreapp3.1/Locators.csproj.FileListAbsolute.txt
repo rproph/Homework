@@ -1,0 +1,16 @@
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\bin\Debug\netcoreapp3.1\Locators.exe
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\bin\Debug\netcoreapp3.1\Locators.deps.json
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\bin\Debug\netcoreapp3.1\Locators.runtimeconfig.json
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\bin\Debug\netcoreapp3.1\Locators.runtimeconfig.dev.json
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\bin\Debug\netcoreapp3.1\Locators.dll
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\bin\Debug\netcoreapp3.1\Locators.pdb
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\bin\Debug\netcoreapp3.1\WebDriver.dll
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\obj\Debug\netcoreapp3.1\Locators.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\obj\Debug\netcoreapp3.1\Locators.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\obj\Debug\netcoreapp3.1\Locators.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\obj\Debug\netcoreapp3.1\Locators.AssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\obj\Debug\netcoreapp3.1\Locators.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\obj\Debug\netcoreapp3.1\Locators.dll
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\obj\Debug\netcoreapp3.1\Locators.pdb
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework12\Locators\obj\Debug\netcoreapp3.1\Locators.genruntimeconfig.cache

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "G578jF/cTUHcgbuUfa4i4dZcyjCjfC1zumJkC/Gj/B6x7N1w6QOf0yWhiPxWs7F0KD3MH5fPbQaQ1qBP7ekgig==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\Documents\\GitHub\\ITAWorks\\Homework12\\Locators\\Locators.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\selenium.webdriver\\4.1.0\\selenium.webdriver.4.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\selenium.webdriver.chromedriver\\97.0.4692.7100\\selenium.webdriver.chromedriver.97.0.4692.7100.nupkg.sha512"
+  ],
+  "logs": []
+}
