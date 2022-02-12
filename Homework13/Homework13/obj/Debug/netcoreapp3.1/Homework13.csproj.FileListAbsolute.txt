@@ -1,0 +1,5 @@
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework13\Homework13\obj\Debug\netcoreapp3.1\Homework13.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework13\Homework13\obj\Debug\netcoreapp3.1\Homework13.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework13\Homework13\obj\Debug\netcoreapp3.1\Homework13.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework13\Homework13\obj\Debug\netcoreapp3.1\Homework13.AssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\ITAWorks\Homework13\Homework13\obj\Debug\netcoreapp3.1\Homework13.csproj.CoreCompileInputs.cache
